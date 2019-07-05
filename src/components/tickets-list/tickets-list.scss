@@ -1,0 +1,106 @@
+$leftPartMaxWidth: 200px;
+$partMargin: 20px;
+
+.tickets-list-holder {
+  width: 100%;
+
+  .card {
+    margin: 20px 0 20px 0;
+  }
+
+  .ticket {
+    display: flex;
+
+    .vertical-sep {
+      width: 2px;
+      height: 100%;
+      background: #f2f4f6;
+      position: absolute;
+      top: 0;
+      left: calc(#{$leftPartMaxWidth} + #{$partMargin} * 2);
+    }
+
+    .part {
+      display: flex;
+      width: 50%;
+      position: relative;
+
+      &.left {
+        max-width: $leftPartMaxWidth;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-right: $partMargin;
+
+        img {
+          width: 85%;
+          max-width: 85%;
+          margin-bottom: 10px;
+        }
+      }
+
+      &.right {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+
+      }
+
+      .row {
+        width: 80%;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    .separator {
+      margin: 0 20px;
+      text-transform: uppercase;
+      color: #9fa7a9;
+      font-size: .725rem;
+      font-weight: bold;
+      text-align: center;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .line{
+        width: 100%;
+        background: #cccccc;
+        height: 1px;
+        padding-right: 110%;
+      }
+
+      img{
+        margin: 0 0 0 10px;
+        opacity: .2;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+
+    .time {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .port {
+      font-weight: bold;
+      font-size: .725rem;
+      margin-bottom: 2px;
+    }
+
+    .date {
+      font-size: .75rem;
+      color: #9fa7a9;
+    }
+  }
+}

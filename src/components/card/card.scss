@@ -1,0 +1,17 @@
+.card{
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .15);
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+
+  &.hoverable{
+    &:hover{
+      box-shadow: 0 0 12px 6px rgba(0, 0, 0, .15);
+    }
+  }
+}

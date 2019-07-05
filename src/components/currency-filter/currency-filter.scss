@@ -1,0 +1,48 @@
+$btnBorderRadius: 4px;
+$blueColor: #2196f3;
+
+.filter-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .725rem;
+}
+
+.btn-group {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0 0 0;
+  border-radius: $btnBorderRadius;
+
+  .btn {
+    width: calc(100% / 3);
+    font-size: .85rem;
+    color: $blueColor;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #d2d5d6;
+
+    &.active {
+      background: $blueColor;
+      color: #fff;
+      border-color: $blueColor;
+    }
+
+    &:hover:not(.active) {
+      background: #f2fcff;
+      color: $blueColor;
+      border-color: #64b5f5;
+    }
+
+    &:first-child {
+      border-radius: $btnBorderRadius 0 0 $btnBorderRadius;
+    }
+
+    &:last-child {
+      border-radius: 0 $btnBorderRadius $btnBorderRadius 0;
+    }
+  }
+}
